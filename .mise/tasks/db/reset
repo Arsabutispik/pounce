@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="DANGER: delete the database volume and start fresh"
+set -euo pipefail
+read -r -p "This deletes ALL rules. Type yes to continue: " ok
+[ "$ok" = "yes" ] || { echo "Aborted."; exit 1; }
+docker compose down -v

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#MISE description="Open a psql shell in the database container"
+set -euo pipefail
+docker compose exec db psql -U "${POSTGRES_USER:-pounce}" -d "${POSTGRES_DB:-pounce}"

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#MISE description="Rebuild on change and restart the bot"
+#MISE depends=["db:up"]
+set -euo pipefail
+pnpm exec tsc
+pnpm exec tsc --watch --preserveWatchOutput &
+TSC_PID=$!
+trap "kill $TSC_PID 2>/dev/null || true" EXIT
+node --watch dist/bot/main.js

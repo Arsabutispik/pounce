@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#MISE description="Build, then run the bot"
+#MISE depends=["build", "db:up"]
+set -euo pipefail
+node dist/bot/main.js

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#MISE description="Type-check without emitting"
+set -euo pipefail
+pnpm exec tsc --noEmit

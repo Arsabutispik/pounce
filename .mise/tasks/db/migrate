@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#MISE description="Apply database migrations (also runs automatically on bot start)"
+#MISE depends=["build"]
+set -euo pipefail
+node dist/db/migrate.js

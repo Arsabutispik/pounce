@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#MISE description="Start Postgres in Docker and wait until it is healthy"
+set -euo pipefail
+docker compose up -d --wait db

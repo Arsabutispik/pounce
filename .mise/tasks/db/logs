@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#MISE description="Follow Postgres logs"
+set -euo pipefail
+docker compose logs -f db

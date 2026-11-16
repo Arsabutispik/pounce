@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#MISE description="Compile TypeScript to dist/ (emits the decorator metadata DI needs)"
+set -euo pipefail
+pnpm exec tsc

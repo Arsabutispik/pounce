@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#MISE description="Stop Postgres (data is kept in the Docker volume)"
+set -euo pipefail
+docker compose down

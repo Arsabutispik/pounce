@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#MISE description="Run the engine smoke tests, plus the database tests when DATABASE_URL is set"
+#MISE depends=["build"]
+set -euo pipefail
+node dist/test/smoke.js
+node dist/test/files.js
+node dist/test/help.js
+node dist/test/ruleFile.js
+node dist/test/suggest.js
+node dist/test/service.js
+node dist/test/commands.js
+node dist/test/store.js
